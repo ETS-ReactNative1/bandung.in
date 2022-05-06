@@ -12,6 +12,9 @@ import { Cihampelas } from './screens/infobdg/Cihampelas'
 import { Braga } from './screens/infobdg/Braga'
 import { Bosscha } from './screens/infobdg/Bosscha'
 import { About } from './screens/About'
+import { Team } from './screens/about/Team';
+import { Changelog } from './screens/about/Changelog';
+import { Updates } from './screens/about/Updates';
 
 const Root = createNativeStackNavigator()
 
@@ -39,6 +42,9 @@ export default function App() {
           >
               <Root.Screen name="Home" component={Screen.Home} options={{ title: "Bandung.in",  }} />
               <Root.Screen name="About" component={About} options={{ headerBackVisible: false, title: "About Bandung.in",  }} />
+              <Root.Screen name="Team" component={Team} options={{ title: "Bandung.in Team",  }} />
+              <Root.Screen name="Changelog" component={Changelog} options={{ title: "Changelog",  }} />
+              <Root.Screen name="Updates" component={Updates} options={{ title: "Future Updates",  }} />
               <Root.Screen name="Pasupati" component={Pasupati} options={{ title: "Info Bandung",  }} />
               <Root.Screen name="Cihampelas" component={Cihampelas} options={{ title: "Info Bandung",  }} />
               <Root.Screen name="Braga" component={Braga} options={{ title: "Info Bandung",  }} />

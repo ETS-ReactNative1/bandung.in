@@ -31,8 +31,8 @@ function Notification() {
             <Popover.Body>
                 <ScrollView h="200px">
                     <VStack space={2}>
-                        {notifArray.map((notif) => (
-                            <Alert w="100%" status={notif.status}>
+                        {notifArray.map((notif, index) => (
+                            <Alert w="100%" status={notif.status} id={index}>
                             <VStack space={2} flexShrink={1} w="100%">
                             <HStack flexShrink={1} space={2} justifyContent="space-between">
                                 <HStack space={2} flexShrink={1}>
@@ -64,7 +64,7 @@ export const SearchBar = () => {
                 <Box bg="white" w="100%" h="38" maxH="38" borderRadius="10" />
                 <Input borderColor="#000" maxH="38" variant="unstyled" placeholder="Search for Angkot, Damri, Kost, etc" width="100%" borderRadius="10" py="1" px="2" borderWidth="0" InputLeftElement={<Icon ml="2" size="4" color="gray.400" as={<Ion name="search" />} />}  />
             </ZStack>
-            <Box h="38px" w="100%" flex={1} display="flex" alignItems="flex-end" justifyContent="center" >
+            <Box h="38px" w="100%" flex={1} display="flex" alignItems="flex-end" mt={1} >
                 <Notification />
             </Box>
         </Box>
