@@ -1,13 +1,14 @@
 {
   "expo": {
     "name": "bandung.in",
-    "slug": "bandung.in",
+    "slug": "bandung-in",
     "version": "1.0.0",
+    "owner": "farellfaiz",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
