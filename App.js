@@ -29,6 +29,7 @@ import { Laundry } from './screens/maps/Laundry';
 import { Medis } from './screens/maps/Medis';
 import { Olahraga } from './screens/maps/Olahraga';
 import { Wisata } from './screens/maps/Wisata';
+import { StatusBar } from 'react-native';
 
 const Root = createNativeStackNavigator()
 
@@ -41,6 +42,7 @@ const config = {
 export default function App() {
   return (
       <NativeBaseProvider config={config}>
+        <StatusBar backgroundColor="#A1C7F6" barStyle='light-content' />
         <NavigationContainer>
             <Root.Navigator
                 screenOptions={{
