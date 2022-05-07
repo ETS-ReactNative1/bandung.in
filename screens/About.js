@@ -48,7 +48,7 @@ export const About = ({ navigation, route }) => {
                 <Box px={6} w="100%">
                     <SearchBar />
                 </Box>
-                <ScrollView mt="80px" w="100%" h="500px" space={2} display="flex">
+                <ScrollView mt="80px" w="100%" h="100%" space={2} display="flex">
                     <VStack>
                         <Center mt={7}>
                             <Image
@@ -97,7 +97,7 @@ export const About = ({ navigation, route }) => {
                                 <Text fontSize="13px" color="coolGray.500">Introduction to Engineering and Design</Text>
                                 <Text fontSize="13px" color="coolGray.500">Faculty of Earth Science and Technology</Text>
                                 <Text fontSize="13px" color="coolGray.500">Institut Teknologi Bandung</Text>
-                                <Text mt={2} fontSize="13px" color="coolGray.500">Group 7 at K03 </Text>
+                                <Text mt={2} fontSize="13px" color="coolGray.500" mb={10}>Group 7 at K03 </Text>
                             </Center>
                         </Center>
                     </VStack>
