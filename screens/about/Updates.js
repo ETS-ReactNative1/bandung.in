@@ -22,6 +22,10 @@ export const Updates = ({ navigation, route }) => {
                 <Text>• Enable search bar</Text>
                 <Text>• Authentication</Text>
                 <Text>• Navigations and maps improvement</Text>
+                <Text>• Migrate from Google MyMaps to the basic Google Maps for navigations, locations, and mapview.</Text>
+                <Text>• Migrate from 3rd party transportation provider to authentic system of transportation mapping.</Text>
+                <Text>• Wishlist and Favourite route and places.</Text>
+                <Text>• Better content management system.</Text>
             </ScrollView>
         </ZStack>
       </Box>

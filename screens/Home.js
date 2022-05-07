@@ -9,6 +9,17 @@ import Braga from './infobdg/Braga'
 import Bosscha from './infobdg/Bosscha'
 import * as data from '../app.json'
 import { SearchBar } from '../components/SearchBar'
+import { Angkot } from './features/Angkot';
+import { useNavigation } from '@react-navigation/native';
+import { Damri } from './features/Damri';
+import { WebView } from 'react-native-webview';
+import { BandungMap } from './BandungMap';
+import { Kosan } from './maps/Kosan';
+import { Coffee } from './maps/Coffee';
+import { Laundry } from './maps/Laundry';
+import { Medis } from './maps/Medis';
+import { Olahraga } from './maps/Olahraga';
+import { Wisata } from './maps/Wisata';
 
 export const Home = ({ navigation }) => {
     return (
@@ -25,7 +36,11 @@ export const Home = ({ navigation }) => {
                     <SearchBar />
                 </Box>
                 <Box>
-                    <Box w="100%" h="170px" bg="gray.200" borderRadius={10} shadow={3} /> 
+                    <Pressable onPress={() => navigation.navigate('BandungMap')} w="100%" h="170px" bg="gray.200" overflow='hidden' borderRadius={10} shadow={3}> 
+                        <Box w='700px' h='380px' overflow='hidden' top='-150px' left='-137px' >
+                            <WebView source={{ uri: 'https://www.google.com/maps/d/u/0/embed?mid=14IDiHJVFunln1OCk3SMjpYzhuMFiLiYI&ehbc=2E312F' }} />
+                        </Box>
+                    </Pressable>
                 </Box>
 
                 <ScrollView w="100%" h="320px">
@@ -34,25 +49,25 @@ export const Home = ({ navigation }) => {
                     </Heading>
                     <VStack>
                         <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Kontak')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#DCE9F2" display="flex" justifyContent="center" alignItems="center">
-                                    <Image source={require('../assets/explore/damri.png')} alt="damri" />
+                                    <Image source={require('../assets/explore/kontak.png')} alt="damri" />
                                 </Box>
-                                <Text mt="0.5">Damri</Text>
+                                <Text mt="0.5">Kontak</Text>
                             </Pressable>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Angkot')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#E4F2DC" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/angkot.png')} alt="angkot" />
                                 </Box>
                                 <Text mt="0.5">Angkot</Text>
                             </Pressable>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Kosan')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#F7FAD3" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/kos.png')} alt="kosan" />
                                 </Box>
                                 <Text mt="0.5">Kostan</Text>
                             </Pressable>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Laundry')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#DCF2ED" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/laundry.png')} alt="laundry" />
                                 </Box>
@@ -60,33 +75,33 @@ export const Home = ({ navigation }) => {
                             </Pressable>
                         </Box>
                         <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Olahraga')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#DCE9F2" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/olahraga.png')} alt="olahraga" />
                                 </Box>
                                 <Text mt="0.5">Sarana</Text>
                                 <Text>Olahraga</Text>
                             </Pressable>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Coffee')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#F2EEDC" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/kopi.png')} alt="kafe" />
                                 </Box>
-                                <Text mt="0.5">Cafe</Text>
-                                <Text>{' '}</Text>
+                                <Text mt="0.5">Cafe &amp;</Text>
+                                <Text>Spaces</Text>
                             </Pressable>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Wisata')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#FFEDE3" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/wisata.png')} alt="wisata" />
                                 </Box>
                                 <Text mt="0.5">Tempat</Text>
                                 <Text>Wisata</Text>
                             </Pressable>
-                            <Pressable display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Pressable onPress={() => navigation.navigate('Medis')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#E9FCDA" display="flex" justifyContent="center" alignItems="center">
                                     <Image source={require('../assets/explore/rs.png')} alt="rs" />
                                 </Box>
-                                <Text mt="0.5">Rumah</Text>
-                                <Text>Sakit</Text>
+                                <Text mt="0.5">Fasilitas</Text>
+                                <Text>Kesehatan</Text>
                             </Pressable>
                         </Box>
                     </VStack>

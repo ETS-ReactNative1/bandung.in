@@ -5,6 +5,8 @@ import Fa from 'react-native-vector-icons/FontAwesome5';
 import Ion from 'react-native-vector-icons/Ionicons';
 import About from '../screens/About'
 import Home from '../screens/Home'
+import Kontak from '../screens/Kontak'
+import { BandungMap } from '../screens/BandungMap';
 
 export const Footer = () => {
   const navigation = useNavigation();
@@ -16,14 +18,14 @@ export const Footer = () => {
                   <Icon as={Ent} name={'home'} size={30} color={'#fff'} />
               </Center>
           </Pressable>
-          <Pressable flex={1} onPress={() => navigation.navigate('About')}>
+          <Pressable flex={1} onPress={() => navigation.navigate('BandungMap')}>
               <Center>
                   <Icon as={Fa} name={'map-marked-alt'} size={25} color={'#fff'} solid />
               </Center>
           </Pressable>
-          <Pressable flex={1} onPress={() => navigation.navigate('About')}>
+          <Pressable flex={1} onPress={() => navigation.navigate('Kontak')}>
               <Center>
-                  <Icon as={Fa} name={'heart'} size={25} color={'#fff'} solid />
+                  <Icon as={Ent} name={'old-phone'} size={25} color={'#fff'} solid />
               </Center>
           </Pressable>
           <Pressable flex={1} onPress={() => navigation.navigate('About')}>

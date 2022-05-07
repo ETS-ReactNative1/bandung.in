@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "bandung.in",
+    "name": "Bandung.in",
     "slug": "bandung-in",
     "version": "1.0.0",
     "owner": "farellfaiz",
@@ -18,16 +18,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.farellfaiz.bandungin"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.farellfaiz.bandungin"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Bandung all-in-one application built with React Native.",
+    "githubUrl": "https://github.com/farellfaiz/bandung.in"
   }
 }
