@@ -29,7 +29,7 @@ function Notification() {
             <Popover.CloseButton />
             <Popover.Header><Heading color="coolGray.700" size='md'>Notifications</Heading></Popover.Header>
             <Popover.Body>
-                <ScrollView h="200px">
+                <ScrollView flex={1}>
                     <VStack space={2}>
                         {notifArray.map((notif, index) => (
                             <Alert w="100%" status={notif.status} id={index}>
