@@ -11,7 +11,7 @@ export const Updates = ({ navigation, route }) => {
                 <Image source={require('../../assets/bg/ellipse2.png')} alt="Ellips Header" w="100%" mt="-140px" />
             </Box>
 
-            <ScrollView mt="50px" w="100%" h="700px" px={6} space={8} display="flex">
+            <ScrollView mt="50px" w="100%" h="100%" px={6} space={8} display="flex">
                 <Heading textAlign="center" mb={8}>Future Updates</Heading>
                 <Heading size='sm'>Codebase</Heading>
                 <Text>• Project structure optimization</Text>

@@ -11,19 +11,19 @@ export const Bosscha = ({ navigation, route }) => {
                 <Image source={require('../../assets/bg/ellipse2.png')} alt="Ellips Header" w="100%" mt="-140px" />
             </Box>
 
-            <ScrollView mt="50px" w="100%" h="700px" px={6} space={8} display="flex">
+            <ScrollView mt="50px" w="100%" h="100%" px={6} space={8} display="flex">
                 <Heading textAlign="center">Berkenalan dengan Observatorium Bosscha</Heading>
                 <Image borderRadius={10} shadow="4" my={7} source={require('../../assets/infobdg/bosscha.jpg')} alt="gambar info" w="100%" maxH={200} resizeMode='cover' />
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Observatorium Bosscha adalah salah satu destinasi wisata edukatif yang aslinya merupakan lembaga khusus pendidikan dan penelitian. Observatorium ini berada di bawah naungan Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA) Istitut Teknologi Bandung atau ITB.
                 </Text>
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Observatorium tertua di Indonesia ini dibangun pada jama kolonilaisme Belanda oleh Nederlandsch Indische Sterrenkundige Vereeniging (NISV) pada tahun 1923. Nama Bosscha diambil dari nama pengusaha donatur bangunan ini yaitu Karel Albert Rudolph Bosscha.
                 </Text>
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Bangunan bersejarah ini telah diresmikan sebagai Benda Cagar Budaya pada tahun 2004, lalu pada tahun 2008 ditetapkan sebagai salah satu Obyek Vital nasional.
                 </Text>
-                <Text>
+                <Text textAlign='justify'>
                 Observatorium Bosscha kini berusia hampir 100 tahun dan dilengkapi dengan 12 teleskop dengan fungsi yang berbeda-beda. Namun dari ke-12 teleskop tersebut hanya enam yang digunakan untuk kegiatan penelitian, salah satunya adalah Teleskop GAO Remote Telescope System. 
                 </Text>
             </ScrollView>

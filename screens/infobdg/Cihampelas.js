@@ -11,25 +11,25 @@ export const Cihampelas = ({ navigation, route }) => {
                 <Image source={require('../../assets/bg/ellipse2.png')} alt="Ellips Header" w="100%" mt="-140px" />
             </Box>
 
-            <ScrollView mt="50px" w="100%" h="700px" px={6} space={8} display="flex">
+            <ScrollView mt="50px" w="100%" h="100%" px={6} space={8} display="flex">
                 <Heading textAlign="center">Geliat Cihampelas Saat Libur Lebaran</Heading>
                 <Image borderRadius={10} shadow="4" my={7} source={require('../../assets/infobdg/cihampelas.jpeg')} alt="gambar info" w="100%" maxH={260} resizeMode='cover' />
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Langit tampak mendung menyelimuti di kawasan Cihampelas, Kota Bandung. Jalanan yang tidak begitu lebar tidak henti-hentinya dilewati kendaraan hingga menimbulkan kemacetan.
                 </Text>
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Suara pedagang saling sahut mengajak pejalan kaki agar mampir ke lapak dan toko mereka untuk melihat barang dagangannya. Sesekali, terdengar suara peluit dari tukang parkir yang sedang mengatur kendaraan.
                 </Text>
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Begitulah gambaran suasana di kawasan wisata belanja Cihampelas, Kota Bandung, Kamis (5/5/2022) sore. Cihampelas memang dikenal sebagai kawasan wisata belanja di Kota Bandung.
                 </Text>
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Selama ini Cihampelas juga menjadi ikon dari Kota Bandung selain Gedung Sate, Jalan Braga dan tempat-tempat lainnya. Cihampelas menggeliat saat momen libur Lebaran 2022.
                 </Text>
-                <Text mb={4}>
+                <Text textAlign='justify' mb={4}>
                     Wisatawan memadati hampir seluruh toko dan tempat berjualan di Jalan Cihampelas sepanjang sekitar 450 meter. Pakaian dan beragam pernah-pernik jadi barang yang paling diburu pengunjung.
                 </Text>
-                <Text mb={20}>
+                <Text textAlign='justify' mb={20}>
                 Kondisi ini membuat ekonomi di kawasan Cihampelas kembali bergeliat. Pasalnya, mereka para pedagang mengaku sempat terpuruk akibat pandemi COVID-19.
                 </Text>
             </ScrollView>

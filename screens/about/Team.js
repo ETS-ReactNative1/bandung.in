@@ -23,7 +23,7 @@ export const Team = ({ navigation, route }) => {
                 <Image source={require('../../assets/bg/ellipse2.png')} alt="Ellips Header" w="100%" mt="-140px" />
             </Box>
 
-            <ScrollView mt="50px" w="100%" h="700px" px={6} space={8} display="flex">
+            <ScrollView mt="50px" w="100%" h="100%" px={6} space={8} display="flex">
               <VStack mb={40}>
                 <Box mb={3}>
                   <Center>
@@ -59,7 +59,7 @@ export const Team = ({ navigation, route }) => {
                   <HStack mt={4} space={4} justifyContent='center'>
                     <Profile nama="Zelika Diva Kirana" nim='241' img={require('../../assets/team/jeje.png')} />
                   </HStack>
-                  <HStack mt={7} mb={10} alignItems='center' justifyContent="center" space={4}>
+                  <HStack mt={7} alignItems='center' justifyContent="center" space={4}>
                     <Image size={20} source={require("../../assets/itb.png")} alt="itb" />
                     <Image size={20} source={require("../../assets/fitb21.png")} alt="fitb 2021" />
                   </HStack>
