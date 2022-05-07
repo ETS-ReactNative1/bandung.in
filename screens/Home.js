@@ -23,27 +23,23 @@ import { Wisata } from './maps/Wisata';
 
 export const Home = ({ navigation }) => {
     return (
-      <Box bg="#fff" w="100%" h="100%">
+      <Box bg="#fff" w="100%" h="100%" flex='1'>
         <ZStack h="100%">
             <Image source={require("../assets/bg/bg.png")} alt="Background Blur" position="absolute" mb="-10px" bottom="0" right="0" size={450} blurRadius={10} />
             <Image source={require("../assets/bg/bg.png")} alt="Background Blur" position="absolute" top="0" left="0" size={250} style={{transform:[{scaleX:-1}, {scaleY:-1}]}} />
-            <Box display="flex" alignItems="center" justifyContent="flex-start" w="100%" h="100%">
-                <Image source={require('../assets/bg/ellipse.png')} alt="Ellips Header" w="100%" mt="-170px" />
-            </Box>
-
-            <VStack w="100%" h="auto" px={6} space={8}>
-                <Box w="100%" h="38">
+            <VStack w="100%" h="100%" px={6} space={8}>
+                <Box zIndex={100} w="100%" h="38">
                     <SearchBar />
                 </Box>
                 <Box>
-                    <Pressable onPress={() => navigation.navigate('BandungMap')} w="100%" h="170px" bg="gray.200" overflow='hidden' borderRadius={10} shadow={3}> 
+                    <Pressable zIndex={99} onPress={() => navigation.navigate('BandungMap')} w="100%" h="170px" bg="gray.200" overflow='hidden' borderRadius={10} shadow={3}> 
                         <Box w='700px' h='380px' overflow='hidden' top='-150px' left='-137px' >
                             <WebView source={{ uri: 'https://www.google.com/maps/d/u/0/embed?mid=14IDiHJVFunln1OCk3SMjpYzhuMFiLiYI&ehbc=2E312F' }} />
                         </Box>
                     </Pressable>
                 </Box>
 
-                <ScrollView w="100%" h="320px">
+                <ScrollView flex='1' overflow='visible'>
                     <Heading size="sm">
                         Find Your Needs in Bandung
                     </Heading>
@@ -113,7 +109,7 @@ export const Home = ({ navigation }) => {
                             <Image source={require('../assets/infobdg/pasupati.jpg')} alt="gambar info" w="100%" h="100%" resizeMode='cover' borderLeftRadius={10} />
                         </Box>
                         <Box flex={2} padding={4}>
-                            <Heading fontWeight="bold" size="md" color="gray.700">Jalan Layang Pasupati Resmi Ganti Nama</Heading>
+                            <Heading fontWeight="bold" size='sm' color="gray.700">Jalan Layang Pasupati Resmi Ganti Nama</Heading>
                         </Box>
                     </Pressable>
                     <Pressable onPress={() => {navigation.push('Cihampelas')}} w="100%" h="100px" bg="#fff" borderRadius={10} my={2} shadow={3} display="flex" flexDir="row" alignItems="center" >
@@ -121,7 +117,7 @@ export const Home = ({ navigation }) => {
                             <Image source={require('../assets/infobdg/cihampelas.jpeg')} alt="gambar info" w="100%" h="100%" resizeMode='cover' borderLeftRadius={10} />
                         </Box>
                         <Box flex={2} padding={4}>
-                            <Heading fontWeight="bold" size="md" color="gray.700">Geliat Cihampelas Saat Libur Lebaran</Heading>
+                            <Heading fontWeight="bold" size="sm" color="gray.700">Geliat Cihampelas Saat Libur Lebaran</Heading>
                         </Box>
                     </Pressable>
                     <Pressable onPress={() => {navigation.push('Braga')}} w="100%" h="100px" bg="#fff" borderRadius={10} my={2} shadow={3} display="flex" flexDir="row" alignItems="center">
@@ -129,7 +125,7 @@ export const Home = ({ navigation }) => {
                             <Image source={require('../assets/infobdg/braga.jpg')} alt="gambar info" w="100%" h="100%" resizeMode='cover' borderLeftRadius={10} />
                         </Box>
                         <Box flex={2} padding={4}>
-                            <Heading fontWeight="bold" size="md" color="gray.700">Jalan Braga: Tempat Favorit di Bandung</Heading>
+                            <Heading fontWeight="bold" size="sm" color="gray.700">Jalan Braga: Tempat Favorit di Bandung</Heading>
                         </Box>
                     </Pressable>
                     <Pressable onPress={() => {navigation.push('Bosscha')}} w="100%" h="100px" bg="#fff" borderRadius={10} my={2} shadow={3} display="flex" flexDir="row" alignItems="center">
@@ -137,11 +133,16 @@ export const Home = ({ navigation }) => {
                             <Image source={require('../assets/infobdg/bosscha.jpg')} alt="gambar info" w="100%" h="100%" resizeMode='cover' borderLeftRadius={10} />
                         </Box>
                         <Box flex={2} padding={4}>
-                            <Heading fontWeight="bold" size="md" color="gray.700">Berkenalan dengan Observatorium Bosscha</Heading>
+                            <Heading fontWeight="bold" size="sm" color="gray.700">Berkenalan dengan Observatorium Bosscha</Heading>
                         </Box>
                     </Pressable>
                 </ScrollView>
             </VStack>
+            <Box display="flex" alignItems="center" justifyContent="flex-start" w="100%" h="100%">
+                <Image source={require('../assets/bg/ellipse.png')} alt="Ellips Header" w="100%" mt="-170px" />
+            </Box>
+
+            
         </ZStack>
       </Box>
     )
