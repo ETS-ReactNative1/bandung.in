@@ -11,10 +11,14 @@ export const Changelog = ({ navigation, route }) => {
                 <Image source={require('../../assets/bg/ellipse2.png')} alt="Ellips Header" w="100%" mt="-140px" />
             </Box>
 
-            <ScrollView mt="50px" w="100%" h="700px" px={6} space={8} display="flex">
+            <ScrollView mt="50px" w="100%" h="100%" px={6} space={8} display="flex">
                 <Heading textAlign="center" mb={8}>Changelog</Heading>
-                <Heading size='sm'>9 May 2022</Heading>
-                <Text>Initial version of Bandung.in launched.</Text>
+                <Heading size='sm'>6 May 2022</Heading>
+                <Text mb={6}>• Initial version of Bandung.in launched.</Text>
+                <Heading size='sm'>7 May 2022</Heading>
+                <Text>• Readjust adaptive icon for Android.</Text>
+                <Text>• Justify news text.</Text>
+                <Text mb={6}>• Fix ScrollView bugs.</Text>
             </ScrollView>
         </ZStack>
       </Box>
