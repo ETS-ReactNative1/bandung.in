@@ -1,6 +1,6 @@
 import React from 'react'
 import {  } from "react-native";
-import { Popover, Alert, HStack, Text, Box, ZStack, Input, Image, Icon, VStack, Pressable, Heading, ScrollView } from "native-base";
+import { useDisclose, Actionsheet, Popover, Alert, HStack, Text, Box, ZStack, Input, Image, Icon, VStack, Pressable, Heading, ScrollView } from "native-base";
 import Ion from 'react-native-vector-icons/Ionicons';
 import MapView from 'react-native-maps';
 import Pasupati from './infobdg/Pasupati'
@@ -20,8 +20,14 @@ import { Laundry } from './maps/Laundry';
 import { Medis } from './maps/Medis';
 import { Olahraga } from './maps/Olahraga';
 import { Wisata } from './maps/Wisata';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 export const Home = ({ navigation }) => {
+    const {
+        isOpen,
+        onOpen,
+        onClose
+    } = useDisclose();
     return (
       <Box bg="#fff" w="100%" h="100%" flex='1'>
         <ZStack h="100%">
@@ -44,32 +50,6 @@ export const Home = ({ navigation }) => {
                         Find Your Needs in Bandung
                     </Heading>
                     <VStack>
-                        <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
-                            <Pressable onPress={() => navigation.navigate('Kontak')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
-                                <Box borderRadius={10} w="50px" h="50px" bg="#DCE9F2" display="flex" justifyContent="center" alignItems="center">
-                                    <Image source={require('../assets/explore/kontak.png')} alt="damri" />
-                                </Box>
-                                <Text mt="0.5">Kontak</Text>
-                            </Pressable>
-                            <Pressable onPress={() => navigation.navigate('Angkot')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
-                                <Box borderRadius={10} w="50px" h="50px" bg="#E4F2DC" display="flex" justifyContent="center" alignItems="center">
-                                    <Image source={require('../assets/explore/angkot.png')} alt="angkot" />
-                                </Box>
-                                <Text mt="0.5">Angkot</Text>
-                            </Pressable>
-                            <Pressable onPress={() => navigation.navigate('Kosan')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
-                                <Box borderRadius={10} w="50px" h="50px" bg="#F7FAD3" display="flex" justifyContent="center" alignItems="center">
-                                    <Image source={require('../assets/explore/kos.png')} alt="kosan" />
-                                </Box>
-                                <Text mt="0.5">Kostan</Text>
-                            </Pressable>
-                            <Pressable onPress={() => navigation.navigate('Laundry')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
-                                <Box borderRadius={10} w="50px" h="50px" bg="#DCF2ED" display="flex" justifyContent="center" alignItems="center">
-                                    <Image source={require('../assets/explore/laundry.png')} alt="laundry" />
-                                </Box>
-                                <Text mt="0.5">Laundry</Text>
-                            </Pressable>
-                        </Box>
                         <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
                             <Pressable onPress={() => navigation.navigate('Olahraga')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
                                 <Box borderRadius={10} w="50px" h="50px" bg="#DCE9F2" display="flex" justifyContent="center" alignItems="center">
@@ -98,6 +78,32 @@ export const Home = ({ navigation }) => {
                                 </Box>
                                 <Text mt="0.5">Fasilitas</Text>
                                 <Text>Kesehatan</Text>
+                            </Pressable>
+                        </Box>
+                        <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
+                            <Pressable onPress={() => navigation.navigate('Laundry')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                                <Box borderRadius={10} w="50px" h="50px" bg="#DCF2ED" display="flex" justifyContent="center" alignItems="center">
+                                    <Image source={require('../assets/explore/laundry.png')} alt="damri" />
+                                </Box>
+                                <Text mt="0.5">Laundry</Text>
+                            </Pressable>
+                            <Pressable onPress={() => navigation.navigate('Angkot')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                                <Box borderRadius={10} w="50px" h="50px" bg="#E4F2DC" display="flex" justifyContent="center" alignItems="center">
+                                    <Image source={require('../assets/explore/angkot.png')} alt="angkot" />
+                                </Box>
+                                <Text mt="0.5">Angkot</Text>
+                            </Pressable>
+                            <Pressable onPress={() => navigation.navigate('Kosan')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                                <Box borderRadius={10} w="50px" h="50px" bg="#F7FAD3" display="flex" justifyContent="center" alignItems="center">
+                                    <Image source={require('../assets/explore/kos.png')} alt="kosan" />
+                                </Box>
+                                <Text mt="0.5">Kostan</Text>
+                            </Pressable>
+                            <Pressable onPress={onOpen} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                                <Box borderRadius={10} w="50px" h="50px" bg="muted.100" display="flex" justifyContent="center" alignItems="center">
+                                    <Icon as={MaterialIcons} name='more-horiz'  size={30} color={'muted.600'} />
+                                </Box>
+                                <Text mt="0.5">More</Text>
                             </Pressable>
                         </Box>
                     </VStack>
@@ -141,9 +147,69 @@ export const Home = ({ navigation }) => {
             <Box display="flex" alignItems="center" justifyContent="flex-start" w="100%" h="100%">
                 <Image source={require('../assets/bg/ellipse.png')} alt="Ellips Header" w="100%" mt="-170px" />
             </Box>
-
-            
         </ZStack>
+        <Actionsheet isOpen={isOpen} onClose={onClose}>
+            <Actionsheet.Content>
+                <VStack w='100%' px='10px'>
+                    <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
+                        <Pressable onPress={() => navigation.navigate('Olahraga')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#DCE9F2" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/olahraga.png')} alt="olahraga" />
+                            </Box>
+                            <Text mt="0.5">Sarana</Text>
+                            <Text>Olahraga</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('Coffee')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#F2EEDC" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/kopi.png')} alt="kafe" />
+                            </Box>
+                            <Text mt="0.5">Cafe &amp;</Text>
+                            <Text>Spaces</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('Wisata')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#FFEDE3" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/wisata.png')} alt="wisata" />
+                            </Box>
+                            <Text mt="0.5">Tempat</Text>
+                            <Text>Wisata</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('Medis')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#E9FCDA" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/rs.png')} alt="rs" />
+                            </Box>
+                            <Text mt="0.5">Fasilitas</Text>
+                            <Text>Kesehatan</Text>
+                        </Pressable>
+                    </Box>
+                    <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-around" marginY={3}>
+                        <Pressable onPress={() => navigation.navigate('Laundry')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#DCF2ED" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/laundry.png')} alt="damri" />
+                            </Box>
+                            <Text mt="0.5">Laundry</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('Angkot')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#E4F2DC" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/angkot.png')} alt="angkot" />
+                            </Box>
+                            <Text mt="0.5">Angkot</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('Kosan')} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="#F7FAD3" display="flex" justifyContent="center" alignItems="center">
+                                <Image source={require('../assets/explore/kos.png')} alt="kosan" />
+                            </Box>
+                            <Text mt="0.5">Kostan</Text>
+                        </Pressable>
+                        <Pressable onPress={onOpen} display="flex" flexDir="column" justifyContent="center" alignItems="center">
+                            <Box borderRadius={10} w="50px" h="50px" bg="muted.100" display="flex" justifyContent="center" alignItems="center">
+                                <Icon as={MaterialIcons} name='more-horiz'  size={30} color={'muted.600'} />
+                            </Box>
+                            <Text mt="0.5">More</Text>
+                        </Pressable>
+                    </Box>
+                </VStack>
+            </Actionsheet.Content>
+        </Actionsheet>
       </Box>
     )
 }
