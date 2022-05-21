@@ -13,12 +13,20 @@ export const Changelog = ({ navigation, route }) => {
 
             <ScrollView mt="50px" w="100%" h="100%" px={6} space={8} display="flex">
                 <Heading textAlign="center" mb={8}>Changelog</Heading>
-                <Heading size='sm'>6 May 2022</Heading>
+
+                <Heading size='sm'>6 May 2022 <Heading size='sm' italic color='coolGray.400'>v1.0.0</Heading></Heading>
                 <Text mb={6}>• Initial version of Bandung.in launched.</Text>
-                <Heading size='sm'>7 May 2022</Heading>
+                
+                <Heading size='sm'>7 May 2022 <Heading size='sm' italic color='coolGray.400'>v1.0.1</Heading></Heading>
                 <Text>• Readjust adaptive icon for Android.</Text>
                 <Text>• Justify news text.</Text>
                 <Text mb={6}>• Fix ScrollView bugs.</Text>
+                
+                <Heading size='sm'>22 May 2022 <Heading size='sm' italic color='coolGray.400'>v1.1.0</Heading></Heading>
+                <Text>• Add sponsor section.</Text>
+                <Text>• Add contributor section.</Text>
+                <Text>• Add eatery map.</Text>
+                <Text mb={6}>• Add actionsheet in menu.</Text>
             </ScrollView>
         </ZStack>
       </Box>

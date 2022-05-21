@@ -17,15 +17,19 @@ export const Updates = ({ navigation, route }) => {
                 <Text>• Project structure optimization</Text>
                 <Text>• Code optimization</Text>
                 <Text>• React Native implementation improvement</Text>
+                <Text>• Actionsheet bug</Text>
 
                 <Heading size='sm' mt={4}>Features and Services</Heading>
                 <Text>• Enable search bar</Text>
                 <Text>• Authentication</Text>
                 <Text>• Navigations and maps improvement</Text>
-                <Text>• Migrate from Google MyMaps to the basic Google Maps for navigations, locations, and mapview.</Text>
-                <Text>• Migrate from 3rd party transportation provider to authentic system of transportation mapping.</Text>
+                <Text>• Migrate from Google MyMaps to Mapbox.</Text>
+                <Text>• Migrate from 3rd party transportation provider to Mapbox Navigation API.</Text>
                 <Text>• Wishlist and Favourite route and places.</Text>
                 <Text>• Better content management system.</Text>
+                <Text>• Create popups from pinpoint with interactive components.</Text>
+                <Text>• Add street name in maps</Text>
+                <Text>• Sort and filtering based on price/category/etc on maps</Text>
             </ScrollView>
         </ZStack>
       </Box>
