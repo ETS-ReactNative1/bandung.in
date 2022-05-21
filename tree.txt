@@ -1,0 +1,130 @@
+Folder PATH listing for volume DATA1
+Volume serial number is 9289-37E7
+D:.
+¦   .gitignore
+¦   App.js
+¦   app.json
+¦   babel.config.js
+¦   eas.json
+¦   package-lock.json
+¦   package.json
+¦   tree.txt
+¦   yarn.lock
+¦   
++---.expo
+¦   ¦   packager-info.json
+¦   ¦   README.md
+¦   ¦   settings.json
+¦   ¦   
+¦   +---web
+¦       +---cache
+¦           +---development
+¦           ¦   +---babel-loader
+¦           +---production
+¦               +---images
+¦                   +---favicon
+¦                       +---favicon-7015a3b06c6acf899fbac68afed37f5406e1ea56ccb021ec41d88a2110f46638-contain-transparent
+¦                               favicon-16.png
+¦                               favicon-32.png
+¦                               favicon-48.png
+¦                               
++---.expo-shared
+¦       assets.json
+¦       README.md
+¦       
++---assets
+¦   ¦   adaptive-icon.png
+¦   ¦   favicon.png
+¦   ¦   fitb21.png
+¦   ¦   icon-white.png
+¦   ¦   icon.png
+¦   ¦   itb.png
+¦   ¦   splash.png
+¦   ¦   
+¦   +---bg
+¦   ¦       bg.png
+¦   ¦       bg2.png
+¦   ¦       ellipse.png
+¦   ¦       ellipse2.png
+¦   ¦       
+¦   +---explore
+¦   ¦       angkot.png
+¦   ¦       damri.png
+¦   ¦       kontak.png
+¦   ¦       kopi.png
+¦   ¦       kos.png
+¦   ¦       laundry.png
+¦   ¦       olahraga.png
+¦   ¦       rs.png
+¦   ¦       wisata.png
+¦   ¦       
+¦   +---infobdg
+¦   ¦       bosscha.jpg
+¦   ¦       braga.jpg
+¦   ¦       cihampelas.jpeg
+¦   ¦       pasupati.jpg
+¦   ¦       
+¦   +---menu
+¦   ¦       angkot.png
+¦   ¦       damri.png
+¦   ¦       kopi.png
+¦   ¦       kos.png
+¦   ¦       laundry.png
+¦   ¦       olahraga.png
+¦   ¦       rs.png
+¦   ¦       wisata.png
+¦   ¦       
+¦   +---team
+¦           alya.png
+¦           anis.png
+¦           edom.png
+¦           faiz.png
+¦           indri.png
+¦           jeje.png
+¦           luthfi.png
+¦           maura.png
+¦           ubeng.png
+¦           
++---components
+¦       Footer.js
+¦       SearchBar.js
+¦             
++---screens
+¦   ¦   About.js
+¦   ¦   BandungMap.js
+¦   ¦   Home.js
+¦   ¦   index.js
+¦   ¦   Kontak.js
+¦   ¦   
+¦   +---about
+¦   ¦       Changelog.js
+¦   ¦       Team.js
+¦   ¦       Updates.js
+¦   ¦       
+¦   +---features
+¦   ¦       Angkot.js
+¦   ¦       Damri.js
+¦   ¦       
+¦   +---infobdg
+¦   ¦       Bosscha.js
+¦   ¦       Braga.js
+¦   ¦       Cihampelas.js
+¦   ¦       Pasupati.js
+¦   ¦       
+¦   +---kontak
+¦   ¦       Darurat.js
+¦   ¦       Pelayanan.js
+¦   ¦       RS.js
+¦   ¦       Transportasi.js
+¦   ¦       
+¦   +---maps
+¦           Coffee.js
+¦           Kosan.js
+¦           Laundry.js
+¦           Medis.js
+¦           Olahraga.js
+¦           Wisata.js
+¦           
++---utils
+        AppNavigation.js
+        

@@ -13,6 +13,8 @@ import { Braga } from './screens/infobdg/Braga'
 import { Bosscha } from './screens/infobdg/Bosscha'
 import { About } from './screens/About'
 import { Team } from './screens/about/Team';
+import { Sponsor } from './screens/about/Sponsor';
+import { Explorers } from './screens/about/Explorers';
 import { Changelog } from './screens/about/Changelog';
 import { Updates } from './screens/about/Updates';
 import { Angkot } from './screens/features/Angkot';
@@ -73,6 +75,8 @@ export default function App() {
                 <Root.Screen name="BandungMap" component={BandungMap} options={{ headerBackVisible: false, title: "Map",  }} />
                 <Root.Screen name="About" component={About} options={{ headerBackVisible: false, title: "About Bandung.in",  }} />
                 <Root.Screen name="Team" component={Team} options={{ title: "Bandung.in Team",  }} />
+                <Root.Screen name="Sponsor" component={Sponsor} options={{ title: "Bandung.in Sponsor",  }} />
+                <Root.Screen name="Explorers" component={Explorers} options={{ title: "Bandung.in Explorers",  }} />
                 <Root.Screen name="Changelog" component={Changelog} options={{ title: "Changelog",  }} />
                 <Root.Screen name="Updates" component={Updates} options={{ title: "Future Updates",  }} />
                 <Root.Screen name="Pasupati" component={Pasupati} options={{ title: "Info Bandung",  }} />

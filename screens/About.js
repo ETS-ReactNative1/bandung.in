@@ -6,6 +6,8 @@ import Fa from 'react-native-vector-icons/FontAwesome'
 import { SearchBar } from '../components/SearchBar';
 import MCI from 'react-native-vector-icons/MaterialCommunityIcons'
 import Team from '../screens/about/Team'
+import Sponsor from '../screens/about/Sponsor'
+import Explorers from '../screens/about/Explorers'
 import Changelog from '../screens/about/Changelog'
 import Updates from '../screens/about/Updates'
 
@@ -81,6 +83,18 @@ export const About = ({ navigation, route }) => {
                         <Center px={6}>
                             <Box borderRadius="xl" mx="10" py={3} px={5} mt={3} w="100%" bg="#ffffff" shadow={5} mb={10}>
                                 <VStack>
+                                    <Pressable onPress={() => navigation.push('Sponsor')}>
+                                        <MenuItems provider={MCI} icon='account-cash' title='Bandung.in Sponsors' desc="Those who maximize the potential" size='4' />
+                                    </Pressable>
+                                    <Pressable onPress={() => navigation.push('Explorers')}>
+                                        <MenuItems provider={MCI} icon='hiking' title='Bandung.in Explorers' desc='Our beloved contributors' size='4' />
+                                    </Pressable>
+                                    <Link href="https://saweria.co/bandungin">
+                                        <MenuItems provider={MCI} icon='hand-heart' title='Become a Sponsor' desc='Fund Bandung.in with easy steps' size='4' />
+                                    </Link>
+                                    <Link href="https://forms.gle/x8zg7WycQz5aLGvv6">
+                                        <MenuItems provider={MCI} icon='flag-variant' title='Join the Explorers' desc='Submit your places!' size='4' />
+                                    </Link>
                                     <Link href="https://github.com/farellfaiz/bandung.in">
                                         <MenuItems provider={Fa} icon='github' title='Github' desc='View code on Github' size='4' />
                                     </Link>
