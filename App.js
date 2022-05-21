@@ -27,6 +27,7 @@ import { RS } from './screens/kontak/RS'
 import { BandungMap } from './screens/BandungMap';
 import { Kosan } from './screens/maps/Kosan';
 import { Coffee } from './screens/maps/Coffee';
+import { Eatery } from './screens/maps/Eatery';
 import { Laundry } from './screens/maps/Laundry';
 import { Medis } from './screens/maps/Medis';
 import { Olahraga } from './screens/maps/Olahraga';
@@ -67,6 +68,7 @@ export default function App() {
                 <Root.Screen name="Damri" component={Damri} options={{ title: "Bus | Powered by Moovit",  }} />
                 <Root.Screen name="Kosan" component={Kosan} options={{ title: "Kostan | Map",  }} />
                 <Root.Screen name="Coffee" component={Coffee} options={{ title: "Coffee and Spaces | Map",  }} />
+                <Root.Screen name="Eatery" component={Eatery} options={{ title: "Tempat Makan | Map",  }} />
                 <Root.Screen name="Laundry" component={Laundry} options={{ title: "Laundry | Map",  }} />
                 <Root.Screen name="Medis" component={Medis} options={{ title: "Fasilitas Kesehatan | Map",  }} />
                 <Root.Screen name="Olahraga" component={Olahraga} options={{ title: "Sarana Olahraga | Map",  }} />
